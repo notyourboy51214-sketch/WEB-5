@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATELIER NOIR | Wood-Fired Gastronomy & Botanical Bar</title>
+  <meta name="description" content="ATELIER NOIR is a Michelin-starred hearth restaurant celebrating ancient ember cookery, foraged botanicals, and biodynamic natural wines.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Island Navigation -->
+  <header class="nav-wrapper">
+    <nav class="noir-nav" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-flame">🔥</span>
+        <div class="brand-titles">
+          <span class="brand-title">ATELIER NOIR</span>
+          <span class="brand-subtitle">HEARTH & EMBER • COPENHAGEN</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#tasting-menu" class="nav-link">Tasting Menu</a>
+        <a href="#hearth" class="nav-link">The Ember Kitchen</a>
+        <a href="#wine" class="nav-link">Cellar & Botanicals</a>
+        <a href="#reservations" class="nav-link">Reservations</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="btn-ember-sm" id="navReserveBtn">
+          <span>Reserve Table</span>
+          <span class="btn-arrow">↗</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-inner">
+      <a href="#tasting-menu" class="drawer-link">Tasting Menu</a>
+      <a href="#hearth" class="drawer-link">The Ember Kitchen</a>
+      <a href="#wine" class="drawer-link">Cellar & Botanicals</a>
+      <a href="#reservations" class="drawer-link">Reservations</a>
+      <button class="btn-ember" id="drawerReserveBtn">
+        <span>Book Chef's Table</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="eyebrow-container">
+          <span class="ember-eyebrow">MICHELIN STARRED • WOOD-FIRED REFINEMENT</span>
+        </div>
+
+        <h1 class="hero-title">
+          Wild botanicals and <br>
+          <em class="fraunces-italic">sacred embers.</em>
+        </h1>
+
+        <p class="hero-subtext">
+          An intimate 24-seat dining room rooted in the primal alchemy of open-fire gastronomy, heritage dry-aging, and ancestral Nordic fermentation.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#tasting-menu" class="btn-ember">
+            <span>Explore Tasting Menus</span>
+            <span class="btn-arrow">⚡</span>
+          </a>
+          <button class="btn-ghost-dark" id="heroReserveBtn">
+            <span>Check Availability</span>
+            <span class="btn-arrow">↓</span>
+          </button>
+        </div>
+
+        <!-- Hero Food Media Frame with High-Res Asset -->
+        <div class="hero-food-frame double-bezel">
+          <div class="food-core">
+            <img src="assets/hero.jpg" alt="ATELIER NOIR Wagyu Striploin with Smoked Bone Marrow on Stoneware" class="hero-img" loading="eager">
+            <div class="food-caption">
+              <span class="course-no">COURSE VI</span>
+              <h4>45-DAY DRY-AGED WAGYU STRIPLOIN // SMOKED MARROW EMULSION & WILD CHANTERELLES</h4>
+              <span class="cook-method">Cooked over Japanese Binchotan Charcoal & Birch Embers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Michelin Credentials Bar -->
+        <div class="creds-bar">
+          <div class="cred-box">
+            <span class="cred-symbol">★ ★</span>
+            <span class="cred-title">Michelin Guide 2026</span>
+          </div>
+          <div class="cred-divider"></div>
+          <div class="cred-box">
+            <span class="cred-symbol">No. 18</span>
+            <span class="cred-title">World's 50 Best Discovery</span>
+          </div>
+          <div class="cred-divider"></div>
+          <div class="cred-box">
+            <span class="cred-symbol">100%</span>
+            <span class="cred-title">Biodynamic Foraged Sourcing</span>
+          </div>
+          <div class="cred-divider"></div>
+          <div class="cred-box">
+            <span class="cred-symbol">24</span>
+            <span class="cred-title">Seats Nightly (2 Seatings)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Signature Feature: Tasting Menu & Pairing Experience -->
+    <section id="tasting-menu" class="section menu-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="ember-eyebrow">INTERACTIVE GASTRONOMIC EXPLORER</span>
+          <h2 class="section-title">The Seasonal Tasting Experiences</h2>
+          <p class="section-desc">Customize your dining journey between our 7-course hearth expression and 11-course grand terroir sequence.</p>
+        </div>
+
+        <div class="menu-experience-wrapper double-bezel">
+          <div class="menu-core">
+            <!-- Top Controls: Experience Selector & Pairing Switch -->
+            <div class="menu-control-bar">
+              <div class="menu-toggles" id="menuToggleGroup">
+                <button class="menu-btn active" data-exp="hearth">
+                  <strong>The Hearth Experience</strong>
+                  <span>7 Courses • DKK 1,650</span>
+                </button>
+                <button class="menu-btn" data-exp="terroir">
+                  <strong>The Grand Terroir</strong>
+                  <span>11 Courses • DKK 2,450</span>
+                </button>
+              </div>
+
+              <div class="pairing-switch-wrapper">
+                <span class="switch-lbl">Beverage Flight:</span>
+                <div class="pairing-pills" id="pairingSelector">
+                  <button class="p-btn active" data-pairing="wine">
+                    <span>Reserve Biodynamic Wine (+DKK 1,100)</span>
+                  </button>
+                  <button class="p-btn" data-pairing="botanical">
+                    <span>Wild Fermented Botanical Elixirs (+DKK 650)</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Allergen Filter -->
+            <div class="allergen-bar">
+              <span class="filter-label">Dietary Adaptations:</span>
+              <label class="check-container">
+                <input type="checkbox" id="pescatarian">
+                <span class="checkmark"></span> Pescatarian
+              </label>
+              <label class="check-container">
+                <input type="checkbox" id="glutenFree">
+                <span class="checkmark"></span> Gluten-Free
+              </label>
+              <label class="check-container">
+                <input type="checkbox" id="nutFree">
+                <span class="checkmark"></span> Shellfish-Free
+              </label>
+            </div>
+
+            <!-- Course Sequence List -->
+            <div class="courses-list" id="coursesList">
+              <!-- Dynamically populated by app.js -->
+            </div>
+
+            <!-- Price Summary & Reservation CTA -->
+            <div class="experience-footer">
+              <div class="price-readout">
+                <span class="total-caption">Total Per Guest:</span>
+                <span class="total-price" id="totalPerGuest">DKK 2,750</span>
+                <span class="vat-note">Inclusive of 25% VAT and artisanal water service</span>
+              </div>
+              <button class="btn-ember" id="menuBookBtn">
+                <span>Reserve This Tasting Menu</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Hearth Section -->
+    <section id="hearth" class="section">
+      <div class="container">
+        <div class="hearth-split">
+          <div class="hearth-copy">
+            <span class="ember-eyebrow">OUR CRAFT</span>
+            <h2 class="section-title">Cooking without gas or electricity. Only embers.</h2>
+            <p class="hearth-text">
+              Every dish at ATELIER NOIR touches wood fire. We burn aged Danish birch, cherrywood, and binchotan to sculpt temperatures from a searing 800°C hearth down to a gentle 45°C cold-smoke chamber.
+            </p>
+            <div class="craft-points">
+              <div class="point">
+                <strong>Zero Synthetic Oils</strong>
+                <p>Rendered grass-fed beef tallow and cold-pressed pine nut oils only.</p>
+              </div>
+              <div class="point">
+                <strong>Coastal Foraging</strong>
+                <p>Beach mustard, sea buckthorn, and scurvy grass harvested daily at low tide.</p>
+              </div>
+            </div>
+          </div>
+          <div class="hearth-card double-bezel">
+            <div class="hearth-card-core">
+              <h3>Tonight's Ember Schedule</h3>
+              <ul class="schedule-list">
+                <li>
+                  <span class="s-time">17:30</span>
+                  <div class="s-info">
+                    <strong>First Seating</strong>
+                    <span>12 Guests • Intimate Hearth Counter</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="s-time">20:30</span>
+                  <div class="s-info">
+                    <strong>Second Seating</strong>
+                    <span>12 Guests • Candlelit Dining Room</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="s-time">23:00</span>
+                  <div class="s-info">
+                    <strong>Late Night Digestif & Records</strong>
+                    <span>Rare Amaros & Vinyl in Botanical Bar</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table Reservation Modal -->
+    <div class="modal-backdrop" id="reservationModal" aria-hidden="true">
+      <div class="modal-dialog double-bezel">
+        <div class="dialog-core">
+          <div class="dialog-header">
+            <h3>Reserve Your Hearth Experience</h3>
+            <button class="close-btn" id="closeReserveBtn">&times;</button>
+          </div>
+          <p class="dialog-sub">Deposit of DKK 500 per guest required to guarantee your table.</p>
+          <form id="reservationForm" class="noir-form">
+            <div class="form-row">
+              <div class="field">
+                <label for="guestName">Guest Name</label>
+                <input type="text" id="guestName" required placeholder="Henrik Lindqvist">
+              </div>
+              <div class="field">
+                <label for="guestEmail">Email Address</label>
+                <input type="email" id="guestEmail" required placeholder="henrik@lindqvist.dk">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="partySize">Party Size</label>
+                <select id="partySize">
+                  <option value="2">2 Guests (Hearth Counter)</option>
+                  <option value="4">4 Guests (Dining Room Table)</option>
+                  <option value="6">6 Guests (Chef's Salon)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="seatingTime">Seating Slot</label>
+                <select id="seatingTime">
+                  <option>17:30 — First Seating</option>
+                  <option>20:30 — Second Seating</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="diningDate">Date of Reservation</label>
+              <input type="date" id="diningDate" required value="2026-09-15">
+            </div>
+            <button type="submit" class="btn-ember full-width">
+              <span>Generate Confirmed Booking Pass</span>
+              <span class="btn-arrow">✓</span>
+            </button>
+            <div class="booking-receipt" id="bookingReceipt" style="display:none;">
+              <strong>✓ Hearth Table Confirmed</strong>
+              <p>Pass #NOIR-2026-X9. A calendar invitation and sommelier questionnaire have been dispatched to your email.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Process Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow-label">OUR APPROACH</span>
+          <h2 class="section-title">How We Deliver Perfection.</h2>
+          <p class="section-desc">A methodical, refined process designed for the most discerning clientele.</p>
+        </div>
+        <div class="process-grid">
+          
+            <div class="process-step">
+              <span class="step-number">01</span>
+              <h3 class="step-title">Sourcing Excellence</h3>
+              <p class="step-desc">We partner exclusively with hyper-local foragers, sustainable fisheries, and heritage farmers to secure the most pristine ingredients daily.</p>
+            </div>
+          
+            <div class="process-step">
+              <span class="step-number">02</span>
+              <h3 class="step-title">Culinary Alchemy</h3>
+              <p class="step-desc">Our Michelin-starred brigade employs both ancient techniques and modernist gastronomy to elevate raw ingredients into art.</p>
+            </div>
+          
+            <div class="process-step">
+              <span class="step-number">03</span>
+              <h3 class="step-title">Immersive Service</h3>
+              <p class="step-desc">Every dish is presented with a choreographed, invisible service style that anticipates your needs without ever intruding on your evening.</p>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow-label">CLIENT EXPERIENCES</span>
+          <h2 class="section-title">Words from our Patrons.</h2>
+        </div>
+        <div class="testimonial-grid">
+          
+            <div class="testimonial-card">
+              <div class="quote-mark">"</div>
+              <p class="testimonial-text">A masterclass in culinary restraint and explosive flavor. Every course at Atelier Noir is a revelation. The wine pairing was immaculate.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">D</div>
+                <div class="author-info">
+                  <h4>D. Chang</h4>
+                  <span>Food Critic</span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="testimonial-card">
+              <div class="quote-mark">"</div>
+              <p class="testimonial-text">The most extraordinary dining experience of my life. The smoked wagyu and the serene, moody atmosphere made it an unforgettable night.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">E</div>
+                <div class="author-info">
+                  <h4>E. Croft</h4>
+                  <span>Gastronome</span>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow-label">KNOWLEDGE BASE</span>
+          <h2 class="section-title">Frequently Asked Questions.</h2>
+        </div>
+        <div class="faq-grid">
+          
+            <div class="faq-item">
+              <h4 class="faq-q">Do you accommodate dietary restrictions?</h4>
+              <p class="faq-a">Yes, with 48 hours notice, our culinary team will design a bespoke tasting menu tailored precisely to your dietary requirements.</p>
+            </div>
+          
+            <div class="faq-item">
+              <h4 class="faq-q">Is there a dress code?</h4>
+              <p class="faq-a">We request elegant, smart-casual attire to complement the sophisticated dining environment. Jackets are preferred but not required.</p>
+            </div>
+          
+            <div class="faq-item">
+              <h4 class="faq-q">How far in advance should I book?</h4>
+              <p class="faq-a">Due to our intimate seating, reservations typically book out 60 days in advance. We highly recommend early planning.</p>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced CTA Section -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta-title">Secure Your Table</h2>
+          <p class="cta-desc">Reservations are highly limited. Book now for an unforgettable gastronomic journey.</p>
+          <a href="#contact" class="btn-pill">
+            <span>Contact ATELIER NOIR</span>
+            <span class="icon-circle">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+
+  <!-- Footer -->
+  <footer class="noir-footer">
+    <div class="container footer-content">
+      <div class="f-left">
+        <span class="f-brand">ATELIER NOIR</span>
+        <p class="f-desc">Kronprinsessegade 18, 1306 København, Denmark • Wood-Fired Gastronomy</p>
+      </div>
+      <div class="f-right">
+        <span class="port-tag">RUNNING ON LOCALHOST:5004</span>
+        <span class="f-copy">© 2026 ATELIER NOIR ApS. All culinary intellectual property reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
