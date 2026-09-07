@@ -4,32 +4,33 @@
    ========================================================================== */
 
 :root {
-  --bg-page: #FAF7F2;
-  --bg-surface: #FFFFFF;
-  --bg-subtle: #F3ECE2;
-  --bg-card-outer: #FFFFFF;
-  --bg-card-inner: #FCFAF7;
+  --bg-page: #050505;
+  --bg-surface: #0a0a0a;
+  --bg-subtle: #121212;
+  --bg-card-outer: #0a0a0a;
+  --bg-card-inner: #121212;
 
-  --border-outer: #E7DDD0;
-  --border-inner: #D9CCC0;
-  --inner-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --border-outer: #27272a;
+  --border-inner: #3f3f46;
+  --inner-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 
-  --text-primary: #181614;
-  --text-secondary: #57514B;
-  --text-muted: #8A8177;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #52525b;
 
-  --accent-amber: #995B29;
-  --accent-amber-light: #F7EFE6;
-  --accent-pine: #28473B;
+  --accent-cyan: #fafafa;
+  --accent-cyan-subtle: #27272a;
+  --accent-amber: #e4e4e7;
+  --accent-amber-subtle: #18181b;
 
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-accent: 'Cinzel', serif;
-  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
 
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
-  --radius-outer: 1.75rem;
-  --radius-inner: 1.25rem;
-  --shadow-culinary: 0 20px 45px -15px rgba(24, 22, 20, 0.05);
+  --radius-outer: 1.5rem;
+  --radius-inner: 1.15rem;
+  --shadow-soft: 0 20px 40px -15px rgba(0, 0, 0, 0.8);
 }
 
 *, *::before, *::after {

@@ -12,6 +12,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
+
+  <style id="niche-override">
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600&display=swap');
+    
+    :root {
+      --font-display: 'Cinzel', serif !important;
+      --font-body: 'Cormorant Garamond', serif !important;
+      --bg-page: #000000 !important;
+      --bg-surface: #111111 !important;
+      --text-primary: #d4af37 !important; /* Gold */
+      --text-secondary: #aaaaaa !important;
+      --radius-outer: 0 !important;
+      --radius-inner: 0 !important;
+    }
+    .hero-layout { display: flex; flex-direction: row-reverse; align-items: center; }
+    .hero-visual { height: 80vh; width: 100%; }
+    .bento-card { background: #0a0a0a !important; border: 1px solid #333; }
+    .primary-btn { background: transparent !important; color: #d4af37 !important; border: 1px solid #d4af37; }
+    .bento-core { background: #111111 !important; }
+  
+  </style>
 </head>
 <body>
 
