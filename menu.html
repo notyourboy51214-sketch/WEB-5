@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gastronomy | Atelier Noir Tasting Menu</title>
+  <meta name="description" content="Explore our seasonal 12-course tasting menu, blending classical French techniques with modern molecular gastronomy.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+  <style>
+    .menu-intro { max-width: 700px; margin: 0 auto 6rem auto; text-align: center; }
+    .menu-intro p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; }
+    .menu-course { margin-bottom: 5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(212,175,55,0.1); }
+    .course-title { font-size: 0.9rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 2rem; display: block; }
+    
+    .dish-block { margin-bottom: 3rem; }
+    .dish-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem; }
+    .dish-name { font-family: var(--font-display); font-size: 1.8rem; color: var(--text-main); }
+    .dish-origin { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+    .dish-desc { color: var(--text-muted); line-height: 1.6; max-width: 600px; }
+    
+    .pairing-note { margin-top: 1rem; padding-left: 1rem; border-left: 2px solid var(--gold); font-style: italic; color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Atelier Noir</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link active">Gastronomy</a>
+        <a href="private-dining.html" class="nav-link">Private Dining</a>
+        <a href="reservations.html" class="nav-link">Reservations</a>
+      </div>
+    </div>
+  </nav>
+
+  <main data-scroll-container>
+    
+    <section class="section" style="padding-top: 150px;">
+      <div class="container">
+        
+        <div class="menu-intro gs-reveal-up">
+          <span style="color: var(--gold); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase;">Chapter VII</span>
+          <h1 style="font-size: 3rem; margin: 1rem 0 2rem 0;">Autumnal Narrative.</h1>
+          <p>Our current 12-course menu explores the transition of seasons—the final vibrant yields of summer giving way to the earthy, smoke-driven preservation techniques of autumn. Every ingredient has been sourced based on peak maturity from our global network of artisanal purveyors.</p>
+          <p><em>AED 1,200 per guest (excluding pairings)</em></p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+          
+          <!-- L'Aube -->
+          <div class="menu-course gs-reveal-up">
+            <span class="course-title">I. L'Aube (The Dawn)</span>
+            
+            <div class="dish-block">
+              <div class="dish-header">
+                <span class="dish-name">Hokkaido Scallop Crudo</span>
+                <span class="dish-origin">Japan / Brittany</span>
+              </div>
+              <p class="dish-desc">Diver-caught scallops cured in kombu, served with a delicate white peach aguachile, finger lime vesicles, and finished with a drop of cold-pressed Moroccan argan oil.</p>
+              <div class="pairing-note">Pairing: 2018 Domaine Leflaive Puligny-Montrachet</div>
+            </div>
+
+            <div class="dish-block">
+              <div class="dish-header">
+                <span class="dish-name">Smoked Oscietra Caviar</span>
+                <span class="dish-origin">Caspian / Normandy</span>
+              </div>
+              <p class="dish-desc">Gently smoked over applewood embers, resting on a bed of whipped bone marrow butter and a fermented buckwheat blini.</p>
+            </div>
+          </div>
+
+          <!-- La Terre -->
+          <div class="menu-course gs-reveal-up">
+            <span class="course-title">II. La Terre (The Earth)</span>
+            
+            <div class="dish-block">
+              <div class="dish-header">
+                <span class="dish-name">Wild Mushroom Consommé</span>
+                <span class="dish-origin">Piedmont / UAE</span>
+              </div>
+              <p class="dish-desc">A clarified, intensely earthy broth of foraged porcini and black trumpet mushrooms, poured tableside over a single cured quail egg yolk and local desert truffles.</p>
+              <div class="pairing-note">Pairing: 15-Year Oloroso Sherry, Bodegas Tradición</div>
+            </div>
+
+            <div class="dish-block">
+              <div class="dish-header">
+                <span class="dish-name">A4 Kagoshima Wagyu</span>
+                <span class="dish-origin">Kyushu / Burgundy</span>
+              </div>
+              <p class="dish-desc">Dry-aged in-house for 45 days. Seared over binchotan charcoal and glazed with a reduction of black garlic and 1998 vintage port, accompanied by a purée of salt-baked celeriac.</p>
+              <div class="pairing-note">Pairing: 2010 Château Margaux, Premier Grand Cru Classé</div>
+            </div>
+          </div>
+
+          <!-- Le Crépuscule -->
+          <div class="menu-course gs-reveal-up" style="border-bottom: none;">
+            <span class="course-title">III. Le Crépuscule (The Twilight)</span>
+            
+            <div class="dish-block">
+              <div class="dish-header">
+                <span class="dish-name">Gorgonzola Dolce & Pear</span>
+                <span class="dish-origin">Lombardy / Rhone</span>
+              </div>
+              <p class="dish-desc">A transition course. Aerated gorgonzola dolce piped into a crisp tuile, balanced with a gel of saffron-poached William pears and candied walnuts.</p>
+            </div>
+
+            <div class="dish-block">
+              <div class="dish-header">
+                <span class="dish-name">Valrhona Grand Cru Textures</span>
+                <span class="dish-origin">Madagascar / Tahiti</span>
+              </div>
+              <p class="dish-desc">A study in chocolate: 70% Guanaja mousse, smoked sea salt caramel core, tempered cacao nibs, and a quenelle of Tahitian vanilla bean glace.</p>
+              <div class="pairing-note">Pairing: 2005 Château d'Yquem, Sauternes</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <!-- Same footer -->
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="font-size: 1.5rem; margin-bottom: 1rem;">Atelier Noir</div>
+        <p style="color: var(--text-muted); font-size: 0.85rem; max-width: 250px;">A sensory journey through modern gastronomy.</p>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <ul style="list-style: none;">
+          <li style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Waldorf Astoria DIFC</li>
+          <li style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Burj Daman, Happiness St</li>
+          <li style="color: var(--text-muted); font-size: 0.9rem;">Dubai, UAE</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul style="list-style: none;">
+          <li style="margin-bottom: 0.5rem;"><a href="tel:+971507522502" style="color: var(--gold); text-decoration: none;">+971 50 752 2502</a></li>
+          <li><a href="mailto:reservations@ateliernoir.com" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">reservations@ateliernoir.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

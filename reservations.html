@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservations | Waldorf Astoria DIFC</title>
+  <meta name="description" content="Book your table for an unforgettable dining experience at Waldorf Astoria DIFC.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+  <style>
+    .res-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 6rem;
+    }
+    .form-group {
+      margin-bottom: 2rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      color: var(--text-main);
+      padding: 0.8rem 0;
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      transition: var(--transition-smooth);
+    }
+    .form-group input:focus, .form-group select:focus {
+      outline: none;
+      border-color: var(--brand-gold);
+    }
+    .form-group select option {
+      background: var(--bg-primary);
+      color: var(--text-main);
+    }
+    .info-panel {
+      border-left: 1px solid var(--brand-gold-muted);
+      padding-left: 3rem;
+    }
+    @media (max-width: 900px) {
+      .res-grid { grid-template-columns: 1fr; gap: 4rem; }
+      .info-panel { border-left: none; padding-left: 0; border-top: 1px solid var(--brand-gold-muted); padding-top: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">Waldorf Astoria</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">The Experience</a>
+        <a href="menu.html" class="nav-link">Gastronomy</a>
+        <a href="private-dining.html" class="nav-link">Private Dining</a>
+        <a href="reservations.html" class="btn">Reservations</a>
+      </div>
+    </div>
+  </nav>
+
+  <main data-scroll-container>
+    
+    <section class="section" style="padding-top: 180px; padding-bottom: 60px;">
+      <div class="container text-center">
+        <span class="hero-subtitle gs-reveal-up">Book a Table</span>
+        <h1 class="gs-reveal-up">Reservations.</h1>
+      </div>
+    </section>
+
+    <section class="section container res-grid">
+      
+      <div class="res-form gs-reveal-up">
+        <form action="/api/reserve" method="POST" id="reservation-form">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" required id="date">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div class="form-group">
+              <label>Time</label>
+              <select required id="time">
+                <option value="" disabled selected>Select Time</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Guests</label>
+              <select required id="guests">
+                <option value="" disabled selected>Number of Guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5+">5+ Guests (Call to book)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" required placeholder="Full Name" id="name">
+          </div>
+          <div class="form-group">
+            <label>Contact Number</label>
+            <input type="tel" required placeholder="+971 00 000 0000" id="phone">
+          </div>
+          
+          <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Confirm Reservation</button>
+        </form>
+
+        <div id="res-success" style="display: none; padding: 2rem; border: 1px solid var(--brand-gold); text-align: center; margin-top: 2rem;">
+          <h3 style="color: var(--brand-gold); margin-bottom: 1rem; font-family: var(--font-display);">Reservation Confirmed</h3>
+          <p>We look forward to hosting you. A confirmation SMS has been sent.</p>
+        </div>
+      </div>
+
+      <div class="info-panel gs-reveal-up">
+        <h3 style="font-family: var(--font-display); color: var(--brand-gold); margin-bottom: 2rem;">Dining Guidelines</h3>
+        
+        <div style="margin-bottom: 2rem;">
+          <span style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">Dress Code</span>
+          <p>Smart Elegant. Gentlemen are requested to wear full-length trousers and closed shoes. Shorts, activewear, and open sandals are not permitted.</p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <span style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">Age Policy</span>
+          <p>Guests aged 12 and above are welcome for dinner service.</p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <span style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">Cancellations</span>
+          <p>We kindly ask for 24 hours notice for any cancellations or changes to your reservation.</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">Waldorf Astoria</div>
+      <div class="footer-links">
+        <a href="index.html">Experience</a>
+        <a href="menu.html">Gastronomy</a>
+        <a href="private-dining.html">Private Dining</a>
+        <a href="reservations.html">Reservations</a>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.85rem;">
+        Burj Daman - Al Mustaqbal St - DIFC - Dubai<br>
+        <a href="tel:+97145159999" style="color: var(--brand-gold); margin-top: 1rem; display: block;">+971 4 515 9999</a>
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.75rem; margin-top: 4rem;">&copy; 2026 Waldorf Astoria DIFC. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('reservation-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const guests = document.getElementById('guests').value;
+      if (guests === '5+') {
+        alert('For parties of 5 or more, please contact the restaurant directly at +971 4 515 9999.');
+        return;
+      }
+      
+      this.style.display = 'none';
+      document.getElementById('res-success').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
