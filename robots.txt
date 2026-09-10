@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://04-restaurant-ateliernoir.netlify.app/sitemap.xml
